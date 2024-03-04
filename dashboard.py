@@ -17,7 +17,7 @@ def create_year_rental(df):
     year_df = df.groupby('yr')['cnt'].sum().reset_index()
     return year_df
 
-df = pd.read_csv("../data/day.csv")
+df = pd.read_csv("day.csv")
 datetime_columns = ["dteday"]
 for column in datetime_columns:
     df[column] = pd.to_datetime(df[column])
